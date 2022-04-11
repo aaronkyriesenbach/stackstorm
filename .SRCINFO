@@ -1,0 +1,16 @@
+pkgbase = stackstorm
+	pkgdesc = Event-driven automation
+	pkgver = 3.6.0
+	pkgrel = 3
+	url = https://stackstorm.com
+	arch = any
+	license = Apache
+	makedepends = git
+	depends = mongodb
+	depends = rabbitmq
+	depends = redis
+	backup = etc/st2/st2.conf
+	source = st2_3.6.0-3_amd64.deb::https://packagecloud.io/StackStorm/stable/packages/ubuntu/focal/st2_3.6.0-3_amd64.deb/download.deb
+	sha256sums = 4bc704be8a5d3ab472d11099d1abc8af297e0ffa061ac46414532a765339554a
+
+pkgname = stackstorm
