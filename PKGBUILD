@@ -20,8 +20,13 @@ package() {
     tar -xf data.tar.xz
 
     cp -r $srcdir/etc $pkgdir
-    cp -r $srcdir/lib $pkgdir
     cp -r $srcdir/opt $pkgdir
     cp -r $srcdir/usr $pkgdir
-    cp -r $srcdir/var $pkgdir
+
+    mkdir $pkgdir/var
+    cp -r $srcdir/var/log $pkgdir/var/
+
+    # Install to target directories, not symlinks
+    cp -r $srcdir/lib $pkgdir/usr
+    cp -r $srcdir/var/run $pkgdir
 }
