@@ -260,187 +260,77 @@ $DH_VENV_DEBUG set +x
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2actionrunner.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2actionrunner.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2actionrunner.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2actionrunner.service' >/dev/null || true
-	fi
+        systemctl enable 'st2actionrunner.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_enable/12.10ubuntu1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2api.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2api.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2api.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2api.service' >/dev/null || true
-	fi
+	systemctl enable 'st2api.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_enable/12.10ubuntu1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2stream.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2stream.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2stream.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2stream.service' >/dev/null || true
-	fi
+	systemctl enable 'st2stream.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_enable/12.10ubuntu1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2auth.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2auth.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2auth.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2auth.service' >/dev/null || true
-	fi
+	systemctl enable 'st2auth.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_enable/12.10ubuntu1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2notifier.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2notifier.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2notifier.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2notifier.service' >/dev/null || true
-	fi
+	systemctl enable 'st2notifier.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_enable/12.10ubuntu1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2rulesengine.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2rulesengine.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2rulesengine.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2rulesengine.service' >/dev/null || true
-	fi
+	systemctl enable 'st2rulesengine.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_enable/12.10ubuntu1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2sensorcontainer.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2sensorcontainer.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2sensorcontainer.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2sensorcontainer.service' >/dev/null || true
-	fi
+	systemctl enable 'st2sensorcontainer.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_enable/12.10ubuntu1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2garbagecollector.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2garbagecollector.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2garbagecollector.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2garbagecollector.service' >/dev/null || true
-	fi
+	systemctl enable 'st2garbagecollector.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_enable/12.10ubuntu1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2timersengine.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2timersengine.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2timersengine.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2timersengine.service' >/dev/null || true
-	fi
+	systemctl enable 'st2timersengine.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_enable/12.10ubuntu1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2workflowengine.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2workflowengine.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2workflowengine.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2workflowengine.service' >/dev/null || true
-	fi
+	systemctl enable 'st2workflowengine.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_enable/12.10ubuntu1
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
 	# This will only remove masks created by d-s-h on package removal.
 	systemctl unmask 'st2scheduler.service' >/dev/null || true
-
-	# was-enabled defaults to true, so new installations run enable.
-	if systemctl --quiet was-enabled 'st2scheduler.service'; then
-		# Enables the unit on first installation, creates new
-		# symlinks on upgrades if the unit file has changed.
-		systemctl enable 'st2scheduler.service' >/dev/null || true
-	else
-		# Update the statefile to add new symlinks (if any), which need to be
-		# cleaned up on purge. Also remove old symlinks.
-		systemctl update-state 'st2scheduler.service' >/dev/null || true
-	fi
+	systemctl enable 'st2scheduler.service' >/dev/null || true
 fi
 # End automatically added section
 # Automatically added by dh_systemd_start/12.10ubuntu1
@@ -452,7 +342,7 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-decon
 		else
 			_dh_action=start
 		fi
-		deb-systemd-invoke $_dh_action 'st2actionrunner.service' 'st2api.service' 'st2auth.service' 'st2garbagecollector.service' 'st2notifier.service' 'st2rulesengine.service' 'st2scheduler.service' 'st2sensorcontainer.service' 'st2stream.service' 'st2timersengine.service' 'st2workflowengine.service' >/dev/null || true
+		systemctl $_dh_action 'st2actionrunner.service' 'st2api.service' 'st2auth.service' 'st2garbagecollector.service' 'st2notifier.service' 'st2rulesengine.service' 'st2scheduler.service' 'st2sensorcontainer.service' 'st2stream.service' 'st2timersengine.service' 'st2workflowengine.service' >/dev/null || true
 	fi
 fi
 # End automatically added section
@@ -555,7 +445,6 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2scheduler.service' >/dev/null || true
 		systemctl unmask 'st2scheduler.service' >/dev/null || true
 	fi
 fi
@@ -569,7 +458,6 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2workflowengine.service' >/dev/null || true
 		systemctl unmask 'st2workflowengine.service' >/dev/null || true
 	fi
 fi
@@ -583,7 +471,6 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2timersengine.service' >/dev/null || true
 		systemctl unmask 'st2timersengine.service' >/dev/null || true
 	fi
 fi
@@ -597,7 +484,6 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2garbagecollector.service' >/dev/null || true
 		systemctl unmask 'st2garbagecollector.service' >/dev/null || true
 	fi
 fi
@@ -611,7 +497,6 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2sensorcontainer.service' >/dev/null || true
 		systemctl unmask 'st2sensorcontainer.service' >/dev/null || true
 	fi
 fi
@@ -625,7 +510,6 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2rulesengine.service' >/dev/null || true
 		systemctl unmask 'st2rulesengine.service' >/dev/null || true
 	fi
 fi
@@ -639,7 +523,6 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2notifier.service' >/dev/null || true
 		systemctl unmask 'st2notifier.service' >/dev/null || true
 	fi
 fi
@@ -653,7 +536,6 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2auth.service' >/dev/null || true
 		systemctl unmask 'st2auth.service' >/dev/null || true
 	fi
 fi
@@ -667,7 +549,6 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2stream.service' >/dev/null || true
 		systemctl unmask 'st2stream.service' >/dev/null || true
 	fi
 fi
@@ -681,7 +562,6 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2api.service' >/dev/null || true
 		systemctl unmask 'st2api.service' >/dev/null || true
 	fi
 fi
@@ -695,10 +575,32 @@ fi
 
 if [ "$1" = "purge" ]; then
 	if [ -x "/usr/bin/systemctl" ]; then
-		systemctl purge 'st2actionrunner.service' >/dev/null || true
 		systemctl unmask 'st2actionrunner.service' >/dev/null || true
 	fi
 fi
 # End automatically added section
 }
 
+pre_install() {
+    preinst install
+}
+
+post_install() {
+    postinst configure
+}
+
+pre_upgrade() {
+    preinst upgrade $2
+}
+
+post_upgrade() {
+    postinst configure $2
+}
+
+pre_remove() {
+    prerm
+}
+
+post_remove() {
+    postrm remove
+}
